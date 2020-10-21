@@ -1,0 +1,311 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+	font: 12px/1.618 'equity text a', equity, serif;
+	font-weight: 400;
+  padding: 0;
+  margin: 0;
+  background: black;
+  min-height: 100vh;
+}
+
+svg {
+  margin: auto;
+  display: block;
+}
+
+symbol {
+  overflow: visible;
+}
+
+a {
+  color: white;
+  font-size: 2rem;
+}
+
+#elements text {
+  fill: white;
+}
+
+.datePicker.rdt,
+#hoverLabel {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 1.618rem;
+}
+
+.datePicker.rdt {
+  top: 0;
+}
+
+#hoverLabel {
+  bottom: 0;
+}
+
+.datePicker .form-control,
+#hoverLabel {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  color: currentColor;
+  background: transparent;
+  border: none;
+  padding: 1em;
+  font: inherit;
+  text-transform: uppercase;
+  font-variant-numeric: normal;
+  font-family: Equity Caps A;
+  letter-spacing: .4em;
+  opacity: .75;
+  max-width: 40em;
+  cursor: pointer;
+}
+
+.datePicker .rdtPicker {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.datePicker .rdtDays,
+.datePicker .rdtTime,
+.datePicker .rdtMonths,
+.datePicker .rdtYears {
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100vh;
+  height: 100%;
+}
+
+.datePicker table {
+  border-collapse: collapse;
+}
+
+.datePicker .rdtDays table,
+.datePicker .rdtTime table {
+  height: 100%;
+}
+
+.datePicker .rdtMonths table:nth-of-type(1),
+.datePicker .rdtYears table:nth-of-type(1) {
+  height: 5rem;
+}
+
+.datePicker .rdtMonths table:nth-of-type(2),
+.datePicker .rdtYears table:nth-of-type(2) {
+  height: calc(100% - 5rem);
+}
+
+.datePicker tbody td {
+  border: 1px dotted rgba(255, 255, 255, 0.25);
+}
+
+.datePicker tbody td.rdtNew,
+.datePicker tbody td.rdtOld {
+  border: none;
+}
+
+.datePicker th {
+  vertical-align: middle !important;
+  border-bottom: none !important;
+}
+
+.datePicker tfoot {
+  border-top: none !important;
+}
+
+.datePicker thead tr:first-child th:hover,
+.datePicker td.rdtDay:hover,
+.datePicker td.rdtHour:hover,
+.datePicker td.rdtMonth:hover,
+.datePicker td.rdtYear:hover,
+.datePicker td.rdtMinute:hover,
+.datePicker td.rdtSecond:hover,
+.datePicker .rdtTimeToggle:hover ,
+.rdtPicker td.rdtActive:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.datePicker td.rdtActive {
+  background: transparent !important;
+}
+
+.datePicker .rdtCounter {
+  width: 2em;
+  height: auto;
+}
+
+.datePicker .rdtCounter .rdtCount {
+  height: auto;
+  font-size: inherit;
+  line-height: 1em;
+}
+
+.datePicker .rdtCounter .rdtBtn {
+  height: auto;
+  line-height: 2em;
+}
+
+.datePicker .rdtCounterSeparator {
+  line-height: 5em;
+}
+
+svg {
+  overflow: visible;
+}
+
+#Gaia {
+  stroke: currentColor;
+  cursor: pointer;
+}
+
+#Gaia circle {
+  fill: transparent;
+}
+
+#Sun,
+#tooltip {
+  cursor: pointer;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.orbit,
+.trail {
+  fill: transparent;
+  stroke: currentColor;
+  pointer-events: none;
+}
+
+#settingsToggle {
+  content: 'hi';
+  appearance: none;
+  -moz-appearance: none;
+  border: 1px solid currentColor;
+  width: 2rem;
+  height: 1rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+
+text {
+  font-family: 'equity text a', equity, serif;
+  text-transform: uppercase;
+  font-variant-numeric: normal;
+  font-family: Equity Caps A;
+}
+
+#settings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  color: white;
+  transition: .25s transform ease-in-out;
+}
+
+#settings.hidden {
+  transform: translateY(-100%);
+}
+
+#settings.visible {
+  transform: translateY(0%);
+}
+
+#settings section {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#settings section > div {
+  flex: 1 1 100%;
+}
+
+#settings input {
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 1px solid currentColor;
+  padding: .5em;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: block;
+  content: '';
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  z-index: 9999999;
+}
+
+.closeButton::before,
+.closeButton::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  display: block;
+  position: relative;
+  transform-origin: 50% .5px;
+}
+
+.closeButton::before {
+  transform: rotate(45deg);
+}
+
+.closeButton::after {
+  transform: rotate(-45deg);
+}
+
+@media print {
+  html, body {
+    background: transparent;
+  }
+  circle,
+  path,
+  polygon,
+  rect,
+  line {
+    stroke: black !important;
+  }
+  text {
+    fill: black !important;
+  }
+  #tooltip {
+    display: none;
+  }
+  #Gaia circle {
+    fill: transparent;
+  }
+}
